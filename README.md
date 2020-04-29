@@ -1,7 +1,7 @@
 # Anciber_SQLInjectionDefense
 Try to SQL Inject this!
 
-<img src="/readme_images/WebPage.png" />
+<img src="/readme_image/WebPage.png" />
 
 ---
 
