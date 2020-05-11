@@ -41,4 +41,5 @@ die('Error processing: bad or malformed request');
 }
 //Libertar o objeto da base de dados
 $db = null;
+echo "<a href='ex08inicio.html'>Go back to MainPage!</a>";
 ?>

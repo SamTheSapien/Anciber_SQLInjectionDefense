@@ -15,11 +15,18 @@ $sql2->setFetchMode(PDO::FETCH_NUM);
 $count = $sql2->rowCount();
 //output data of each row
 if($count!=0){
-while($row=$sql2->fetch()){	
-	echo "id: ".$row[0]." - Nome: ".$row[1]." - email: ".$row[2]." - morada: ".$row[3]." - telefone: ".$row[4]." - Data de Nascimento: ".$row[5]."<br>";
+echo "<table border='1'>";
+echo "<tr>"; 
+echo "<th align='center'>Id</th><th>Nome</th><th>Email</th><th>Morada</th><th>Telefone</th><th>Data de Nascimento</th><th>Apagar</th><th>Modificar</th>";
+echo "</tr>";
+while($row=$sql2->fetch()){
+	$id=$row[0];
+	echo "<tr><td>".$id."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td><td>".$row[4]."</td><td>".$row[5]."</td><td><a href='/ex08/dbremove.php?id=".$id."'>Apagar</a></td><td><a href='/ex08/dbchange.php?id=".$id."'>Modificar</a></td></tr>";
 }
+echo "</table>";
 }else{
 echo "0 results found";
 }
 $db = null;
+echo "<a href='ex08inicio.html'>Go back to MainPage!</a>";
 ?>

@@ -55,4 +55,5 @@ echo ("Utilizador inserido com sucesso!");
 echo ("ERRO! Utilizador nao inserido!");
 }
 $db=null;
+echo "<a href='ex08inicio.html'>Go back to MainPage!</a>";
 ?>
